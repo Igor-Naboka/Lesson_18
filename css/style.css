@@ -597,7 +597,7 @@ body {
   color: #303030;
 }
 
-.header-opacity__content_work::before, .header-opacity__content_dish::before {
+.header-opacity__content_work::before, .header-opacity__content_dish::before, .header-opacity__content_recipes::before {
   font-family: "Helvetica Neue";
   font-weight: 500;
   position: absolute;
@@ -615,9 +615,9 @@ body {
   color: #d9d9d9;
 }
 
-@media (max-width: 500px) {
-  .header-opacity__content_work::before, .header-opacity__content_dish::before {
-    font-size: 25px;
+@media (max-width: 750px) {
+  .header-opacity__content_work::before, .header-opacity__content_dish::before, .header-opacity__content_recipes::before {
+    font-size: 20px;
   }
 }
 
@@ -627,6 +627,10 @@ body {
 
 .header-opacity__content_dish::before {
   content: "Dish Of The Day";
+}
+
+.header-opacity__content_recipes::before {
+  content: "Recipes From Our Chefs";
 }
 
 .header-opacity__content::after {
@@ -642,9 +646,21 @@ body {
   left: 50%;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 600px) {
+  .header-opacity__content::after {
+    top: 102px;
+  }
+}
+
+@media (max-width: 600px) {
   .header-opacity__content {
     font-size: 70px;
+  }
+}
+
+@media (max-width: 440px) {
+  .header-opacity__content {
+    font-size: 55px;
   }
 }
 
@@ -973,4 +989,276 @@ body {
 .card-dish__link:hover {
   background: #34c759;
   color: #252525;
+}
+
+.recipes {
+  padding: 30px 0 30px 0;
+}
+
+.recipes__header {
+  margin-bottom: 59px;
+}
+
+.content-recipes {
+  margin: 0 -15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  row-gap: 30px;
+}
+
+.content-recipes__item-wrapper {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 50%;
+          flex: 0 1 50%;
+  padding: 0 15px;
+}
+
+@media (max-width: 999px) {
+  .content-recipes__item-wrapper {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 100%;
+            flex: 1 1 100%;
+  }
+}
+
+.left-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 60px 90px;
+  border-radius: 6px;
+  -webkit-box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow: hidden;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.left-block:hover .left-block__icons {
+  background: url("../img/index/recipes/comments-black.svg") center/contain no-repeat;
+}
+
+.left-block:hover .meal-button .meal-button__link {
+  opacity: 1;
+}
+
+.left-block:hover .left-block__date,
+.left-block:hover .left-block__coment,
+.left-block:hover .left-block__nickname {
+  color: #252525;
+}
+
+.left-block:hover .left-block__toning {
+  background: #34c759;
+  opacity: 0.3;
+}
+
+.left-block__toning {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: #000;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(38, 38, 38, 0.0001)), to(rgba(38, 38, 38, 0.5)));
+  background: -webkit-linear-gradient(top, rgba(38, 38, 38, 0.0001) 0%, rgba(38, 38, 38, 0.5) 100%);
+  background: -o-linear-gradient(top, rgba(38, 38, 38, 0.0001) 0%, rgba(38, 38, 38, 0.5) 100%);
+  background: linear-gradient(180deg, rgba(38, 38, 38, 0.0001) 0%, rgba(38, 38, 38, 0.5) 100%);
+  z-index: 10;
+}
+
+.left-block__meal {
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  margin-bottom: 65px;
+  z-index: 11;
+}
+
+.left-block__date {
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  margin-bottom: 25px;
+  z-index: 11;
+}
+
+.left-block__coment {
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  font-size: 24px;
+  line-height: 1.67;
+  text-align: center;
+  color: #ffffff;
+  margin-bottom: 45px;
+  z-index: 11;
+}
+
+.left-block__nickname {
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  margin-bottom: 60px;
+  font-size: 14px;
+  line-height: 2.14;
+  color: #ffffff;
+  z-index: 11;
+}
+
+.left-block__icons {
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  position: relative;
+  background: url("../img/index/recipes/comments-white.svg") center/contain no-repeat;
+  height: 30px;
+  width: 135px;
+  z-index: 11;
+}
+
+.meal-button {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  overflow: hidden;
+  z-index: 11;
+}
+
+.meal-button__link {
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  border-radius: 4px;
+  padding: 8px 16px;
+  text-align: center;
+  letter-spacing: 1.25px;
+  text-transform: uppercase;
+  color: #ffffff;
+  opacity: 0.3;
+  background: #000000;
+}
+
+.date {
+  font-size: 14px;
+  line-height: 2.14;
+  color: #ffffff;
+}
+
+.right-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 30px;
+}
+
+.right-block__item {
+  padding: 30px 27px 22px 30px;
+  background: #252525;
+  -webkit-box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.right-block__item:hover .right-block__toning {
+  background: #34c759;
+}
+
+.right-block__item:hover .meal-button .meal-button__link {
+  opacity: 1;
+}
+
+.right-block__item:hover .right-block__text,
+.right-block__item:hover .right-block__date {
+  color: #000;
+}
+
+.right-block__item:hover .right-block__icons {
+  background: url("../img/index/recipes/comments-black.svg") center/contain no-repeat;
+}
+
+@media (max-width: 999px) {
+  .right-block__item {
+    padding: 30px 100px 22px 100px;
+  }
+}
+
+.right-block__text {
+  z-index: 11;
+  position: relative;
+  font-size: 16px;
+  line-height: 1.88;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+.right-block__information {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-column-gap: 15px;
+          column-gap: 15px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  row-gap: 15px;
+}
+
+.right-block__meal {
+  position: relative;
+  z-index: 10;
+}
+
+.right-block__date {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  z-index: 11;
+  position: relative;
+}
+
+.right-block__icons {
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  position: relative;
+  background: url("../img/index/recipes/comments-white.svg") center/contain no-repeat;
+  height: 30px;
+  width: 135px;
+  z-index: 11;
+}
+
+.right-block__toning {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(38, 38, 38, 0.0001)), to(rgba(38, 38, 38, 0.5)));
+  background: -webkit-linear-gradient(top, rgba(38, 38, 38, 0.0001) 0%, rgba(38, 38, 38, 0.5) 100%);
+  background: -o-linear-gradient(top, rgba(38, 38, 38, 0.0001) 0%, rgba(38, 38, 38, 0.5) 100%);
+  background: linear-gradient(180deg, rgba(38, 38, 38, 0.0001) 0%, rgba(38, 38, 38, 0.5) 100%);
+  z-index: 10;
 }
