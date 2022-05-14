@@ -1064,6 +1064,24 @@ body {
   opacity: 0.3;
 }
 
+@media (max-width: 800px) {
+  .left-block {
+    padding: 20px 50px;
+  }
+}
+
+@media (max-width: 470px) {
+  .left-block {
+    padding: 18px 20px;
+  }
+}
+
+@media (max-width: 380px) {
+  .left-block {
+    padding: 18px 10px;
+  }
+}
+
 .left-block__toning {
   position: absolute;
   top: 0;
@@ -1200,6 +1218,12 @@ body {
 @media (max-width: 999px) {
   .right-block__item {
     padding: 30px 100px 22px 100px;
+  }
+}
+
+@media (max-width: 620px) {
+  .right-block__item {
+    padding: 30px 15px 22px 15px;
   }
 }
 
